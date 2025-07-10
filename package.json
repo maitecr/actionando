@@ -1,0 +1,14 @@
+{
+    "name": "fake-deploy-demo",
+    "version": "1.0.0",
+    "description": "A fake deploy demo for GitHub Actions",
+    "main": "index.js",
+    "scripts": {
+        "build": "echo 'Building the project...'",
+        "deploy": "echo 'Deploying the project...'"
+    },
+    "author": "Maitê",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {}
+}

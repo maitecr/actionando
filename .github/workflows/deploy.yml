@@ -1,0 +1,30 @@
+name: Deploy
+
+on:
+    push:
+        branches:
+           - main
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code       # Clonar o próprio repositório na máquina do github, pois o github só tem a definição do workflow
+              uses: actions/checkout@v4
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v4 # Caso for uma action criada, deve-se inserir o caminho relativo
+              with:                       # Parâmetros das actions
+                node-version: '22'        # Definição da versão do node como parâmetro
+
+            - name: Install dependecies
+              run: npm install
+
+            - name: Run Build
+              run: npm run build
+            
+            - name: Run deploy
+              run: npm run deploy
+
+            - name: Post-deploy message
+              run: echo "Application deployed successfully!"

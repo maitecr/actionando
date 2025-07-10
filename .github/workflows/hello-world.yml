@@ -1,2 +1,5 @@
 name: Hello World
-on: [push]      # Pode receber um array de eventos para acionar a mesma automação
+on: [push]      # Pode receber um array de eventos para acionar a mesma automação -> Eventos: quando ocorrer push no repo
+jobs:           # Tarefas
+    hello-world-job:               # Tarefa 1
+        runs-on: ubuntu-latest     # Onde ela vai ser executada

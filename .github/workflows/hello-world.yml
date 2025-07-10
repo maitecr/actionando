@@ -1,0 +1,2 @@
+name: Hello World
+on: [push]      # Pode receber um array de eventos para acionar a mesma automação

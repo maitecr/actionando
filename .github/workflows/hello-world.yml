@@ -3,3 +3,7 @@ on: [push]      # Pode receber um array de eventos para acionar a mesma automaç
 jobs:           # Tarefas
     hello-world-job:               # Tarefa 1
         runs-on: ubuntu-latest     # Onde ela vai ser executada
+
+        steps:                     # Criar steps
+        - name: Print Hello World
+          run: echo "Hello, World"
